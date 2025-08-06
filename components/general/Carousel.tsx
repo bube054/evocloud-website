@@ -1,19 +1,19 @@
 import React from "react";
 
-export default function Carousel() {
-  const logos = [
-    "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_university-of-edinburgh.webp",
-    "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_zeomega.webp",
-    "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_clearitt.webp",
-    "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_fator.webp",
-    "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_clearitt.webp",
-  ];
+export default function Carousel({
+  logos = [],
+  repeat = 3, // default to 3 repeats
+}: {
+  logos: string[];
+  repeat?: number;
+}) {
+  const repeatedLogos = Array.from({ length: repeat }).flatMap(() => logos);
 
   return (
-    <div className="overflow-hidden bg-background py-8">
-      <div className="max-w-screen-xl p-4 mx-auto overflow-hidden">
+    <div className="overflow-hidden bg-background px-4 py-6 md:px-4 md:py-12">
+      <div className="max-w-screen-xl mx-auto overflow-hidden">
         <div className="flex animate-scroll gap-12 min-w-[200%]">
-          {[...logos, ...logos].map((src, i) => (
+          {repeatedLogos.map((src, i) => (
             <img
               key={i}
               src={src}

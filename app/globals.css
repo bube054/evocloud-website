@@ -2,7 +2,7 @@
 @custom-variant hover (&:hover);
 
 /* Base Colors */
-:root {
+/* :root {
   --background: #f9fafb;
   --foreground: #111827;
 
@@ -15,6 +15,9 @@
   --accent: #6366f1;
   --accent-foreground: #ffffff;
 
+  --from: #1a1f4b;
+  --to: #fff;
+
   --muted: #e5e7eb;
   --muted-foreground: #6b7280;
 
@@ -22,6 +25,29 @@
   --input: #f9fafb;
 
   --radius: 0.5rem;
+} */
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+
+  --primary: #60a5fa;
+  --primary-foreground: #0f172a;
+
+  --secondary: #1e293b;
+  --secondary-foreground: #e2e8f0;
+
+  --accent: #818cf8;
+  --accent-foreground: #1e293b;
+
+  --from: #1a1f4b;
+  --to: #000000;
+
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+
+  --border: #1e293b;
+  --input: #0f172a;
 }
 
 /* Dark Mode Overrides */
@@ -38,6 +64,9 @@
 
     --accent: #818cf8;
     --accent-foreground: #1e293b;
+
+    --from: #1a1f4b;
+    --to: #000000;
 
     --muted: #334155;
     --muted-foreground: #94a3b8;
@@ -57,6 +86,8 @@
   --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-from: var(--from);
+  --color-to: var(--to);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);

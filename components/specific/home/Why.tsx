@@ -1,41 +1,39 @@
 import React from "react";
+import H1 from "@/components/ui/headers/H1";
+import H4 from "@/components/ui/headers/H4";
+import Button3 from "@/components/ui/buttons/cta/Button3";
+import Button4 from "@/components/ui/buttons/cta/Button4";
+import SectionCard from "@/components/general/SectionCard";
+import P1 from "@/components/ui/paragraphs/P1";
 
 export default function Why() {
   return (
-    <div className="flex items-center justify-center bg-accent p-4 md:px-4 md:py-12">
-      <div className="max-w-screen-xl w-full p-4 mx-auto space-y-10">
-        <h1 className="text-background text-center text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          Why WSO2?
-        </h1>
-        <div className="flex justify-center items-center gap-4 p-12 bg-background rounded-2xl">
+    <div className="flex items-center justify-center bg-linear-to-br from-accent to-primary px-4 py-6 md:px-4 md:py-12">
+      <div className="max-w-screen-xl w-full mx-auto space-y-10">
+        <H1 className="text-center">Why WSO2?</H1>
+        <SectionCard className="">
           <div className="md:basis-[60%]">
-            <p className="text-base font-normal text-foreground tracking-[0.128px] leading-relaxed mb-4">
+            <P1 className="text-foreground mb-6">
               For nearly 20 years, we’ve helped our customers build platforms so
               they can accelerate digital transformation. Our customers deliver
               thousands of APIs and applications on these platforms.
-            </p>
-            <p className="text-base font-normal text-foreground tracking-[0.128px] leading-relaxed mb-4">
+            </P1>
+            <P1 className="text-foreground mb-6">
               We know building and maintaining platforms is a never-ending task
               that costs a lot of money and usually doesn’t offer the right
               experience for developers.
-            </p>
-            <p className="text-base font-normal text-foreground tracking-[0.128px] leading-relaxed mb-4">
+            </P1>
+            <P1 className="text-foreground mb-6">
               We built Choreo so you don’t have to.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-10">
-              <button
-                type="button"
-                className="px-6 py-3 rounded-lg font-medium text-white bg-primary hover:bg-opacity-90 transition"
-              >
+            </P1>
+            <div className="flex flex-wrap gap-4 md:mb-10">
+              <Button3 type="button" className="">
                 Get Started For Free
-              </button>
+              </Button3>
 
-              <button
-                type="button"
-                className="px-6 py-3 rounded-lg font-medium text-primary border border-primary hover:bg-primary hover:text-white transition"
-              >
+              <Button4 type="button" className="">
                 Contact Us
-              </button>
+              </Button4>
             </div>
           </div>
           <div className="md:basis-[40%]">
@@ -44,14 +42,12 @@ export default function Why() {
               alt=""
             />
           </div>
-        </div>
+        </SectionCard>
 
-        <h1 className="text-background text-center text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          Here’s What Our Customers Say
-        </h1>
+        <H1 className="text-center">Here’s What Our Customers Say</H1>
 
-        <div className="grid grid-cols-6 grid-rows-5 gap-4">
-          <div className="col-span-2 row-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 md:grid-rows-5 gap-4 md:gap-6">
+          <div className="md:col-span-2 md:row-span-2">
             <iframe
               className="w-full aspect-video rounded-xl"
               src="https://www.youtube.com/embed/6oTurM7gESE"
@@ -61,10 +57,15 @@ export default function Why() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="col-span-2 row-span-3 col-start-3">
-            <Testimonial />
+          <div className="md:col-span-2 md:row-span-3 md:col-start-3">
+            <Testimonial
+              testimony="“Testimonial quote goes here. This is a short paragraph describing the user's experience.”"
+              name="Michael Cocca"
+              title="Integration Architect"
+              logo="https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_university-of-edinburgh.webp"
+            />
           </div>
-          <div className="col-span-2 row-span-2 col-start-5">
+          <div className="md:col-span-2 md:row-span-2 md:col-start-5">
             <iframe
               className="w-full aspect-video rounded-xl"
               src="https://www.youtube.com/embed/6oTurM7gESE"
@@ -74,10 +75,15 @@ export default function Why() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="col-span-2 row-span-3 row-start-3">
-            <Testimonial />
+          <div className="md:col-span-2 md:row-span-3 md:row-start-3">
+            <Testimonial
+              testimony="“Testimonial quote goes here. This is a short paragraph describing the user's experience.”"
+              name="Michael Cocca"
+              title="Integration Architect"
+              logo="https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_university-of-edinburgh.webp"
+            />
           </div>
-          <div className="col-span-2 row-span-2 col-start-3 row-start-4">
+          <div className="md:col-span-2 md:row-span-2 md:col-start-3 md:row-start-4">
             <iframe
               className="w-full aspect-video rounded-xl"
               src="https://www.youtube.com/embed/6oTurM7gESE"
@@ -87,8 +93,13 @@ export default function Why() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="col-span-2 row-span-3 col-start-5 row-start-3">
-            <Testimonial />
+          <div className="md:col-span-2 md:row-span-3 md:col-start-5 md:row-start-3">
+            <Testimonial
+              testimony="“Testimonial quote goes here. This is a short paragraph describing the user's experience.”"
+              name="Michael Cocca"
+              title="Integration Architect"
+              logo="https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_university-of-edinburgh.webp"
+            />
           </div>
         </div>
       </div>
@@ -96,48 +107,34 @@ export default function Why() {
   );
 }
 
-function Testimonial() {
+function Testimonial({
+  testimony,
+  name,
+  title,
+  logo,
+}: {
+  testimony?: string;
+  name?: string;
+  title?: string;
+  logo?: string;
+}) {
   return (
-    <div
-      className="flex flex-col justify-between h-full rounded-xl shadow-md px-6 py-8 text-center bg-background text-foreground border border-border"
-      // style={{
-      //   backgroundColor: "var(--background)",
-      //   color: "var(--foreground)",
-      //   border: "1px solid var(--border)",
-      // }}
-    >
-      <div
-        className="text-3xl mb-4 text-muted-foreground"
-        // style={{ color: "var(--muted-foreground)" }}
-      >
-        ❝
-      </div>
+    <div className="flex flex-col justify-between h-full rounded-xl shadow-md px-3 py-4 md:px-6 md:py-8 text-center bg-linear-to-b from-from to-to text-foreground border border-border">
+      <H4 className="text-center text-primary mb-4">❝</H4>
 
-      <p
-        className="text-base mb-6 leading-relaxed tracking-wide "
-        // style={{ letterSpacing: "0.128px" }}
-      >
-        “Testimonial quote goes here. This is a short paragraph describing the
-        user&apos;s experience.”
-      </p>
+      <P1 className="text-center leading-relaxed tracking-wide mb-6">
+        {testimony}
+      </P1>
 
       <div className="mt-auto">
-        <p className="font-semibold tracking-wide">Michael Cocca</p>
-        <p
-          className="text-sm tracking-wide"
-          style={
-            {
-              // color: "var(--muted-foreground)",
-              // letterSpacing: "0.128px",
-            }
-          }
-        >
-          Integration Architect
-        </p>
+        <P1 className="text-center font-semibold tracking-wide">{name}</P1>
+        <P1 className="text-center text-sm tracking-wide text-muted-foreground">
+          {title}
+        </P1>
 
         <div className="mt-2">
           <img
-            src="https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_university-of-edinburgh.webp"
+            src={logo}
             alt="Company Logo"
             className="mx-auto object-contain"
           />

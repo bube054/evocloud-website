@@ -1,42 +1,29 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-export default function Card({
-  text1,
-  text2,
-  text3,
+export default function Card({className, children}: {className?: string, children: React.ReactNode}) {
+  return (
+    <div className={twMerge("rounded-2xl text-left px-8 py-8 w-full border border-border shadow-md flex flex-col justify-between gap-4  bg-linear-to-b from-from to-to", className)}>
+      {children}
+    </div>
+  );
+}
+
+export function Cards({
+  children,
+  className,
 }: {
-  text1: string;
-  text2: string;
-  text3: string;
+  children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <div
-      className="rounded-2xl text-center px-6 py-8 w-full border shadow-md"
-      style={{
-        backgroundImage: "linear-gradient(to bottom, #1a1f4b, #000000)",
-        borderColor: "var(--border)",
-      }}
+      className={twMerge(
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6",
+        className
+      )}
     >
-      <h3
-        className="text-lg mb-8"
-        style={{ color: "var(--muted-foreground)", letterSpacing: "0.128px" }}
-      >
-        {text1}
-      </h3>
-
-      <div
-        className="text-5xl font-bold flex justify-center items-center gap-2 mb-8"
-        style={{ color: "white" }}
-      >
-        <span>{text2}</span>
-      </div>
-
-      <p
-        className="text-xl tracking-wide"
-        style={{ color: "var(--muted-foreground)", letterSpacing: "0.128px" }}
-      >
-        {text3}
-      </p>
+      {children}
     </div>
   );
 }
