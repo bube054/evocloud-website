@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SimpleLink from "@/components/ui/links/SimpleLink";
 import { GiHamburgerMenu } from "react-icons/gi";
-import CTAButton from "@/components/ui/buttons/CTAButton";
+import Button4 from "@/components/ui/buttons/cta/Button4";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function Header() {
           </span>
         </Link>
         <div className="flex md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
-          <CTAButton>Request A Demo</CTAButton>
+          <Button4>Request A Demo</Button4>
           <button
             onClick={handleToggle}
             className="inline-flex items-center w-10 h-10 justify-center text-sm text-foreground rounded-lg md:hidden hover:bg-muted focus:outline-none focus:ring-2 focus:ring-muted"
