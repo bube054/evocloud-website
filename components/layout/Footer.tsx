@@ -84,61 +84,65 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="px-4 py-6 md:px-4 md:py-12">
-      <div className="max-w-screen-xl w-full mx-auto gap-4 sm:gap-x-6 sm:gap-y-12 flex flex-col-reverse sm:flex-row items-start">
-        <div className="">
-          <Card className="px-4 py-6 md:w-sm">
-            <P1 className="text-primary">Get Updates on Choreo</P1>
+    <>
+      <footer className="px-4 py-6 md:px-4 md:py-12">
+        <div className="max-w-screen-xl w-full mx-auto gap-4 sm:gap-x-6 sm:gap-y-12 flex flex-col-reverse sm:flex-row items-start">
+          <div className="">
+            <Card className="px-4 py-6 md:w-sm">
+              <P1 className="text-primary">Get Updates on Choreo</P1>
 
-            <Input1 placeholder="Enter your email address" />
+              <Input1 placeholder="Enter your email address" />
 
-            <div className="flex items-center gap-2">
-              <CheckBox1 />
-              <Label1>I agree to the WSO2 Data Privacy Policy.</Label1>
-            </div>
+              <div className="flex items-center gap-2">
+                <CheckBox1 />
+                <Label1>I agree to the WSO2 Data Privacy Policy.</Label1>
+              </div>
 
-            <Button3 type="button">Subscribe To choreo Newsletter</Button3>
-          </Card>
+              <Button3 type="button">Subscribe To choreo Newsletter</Button3>
+            </Card>
 
-          <div className="p-4">
-            <P1 className="mb-4 text-foreground">Follow us on:</P1>
-            <div className="flex items-center gap-4 text-foreground mb-4">
-              <Link href="#" className="text-foreground hover:text-primary">
-                <FaDiscord className="min-h-6 min-w-6" />
-              </Link>
-              <Link href="#" className="text-foreground hover:text-primary">
-                <FaTwitter className="min-h-6 min-w-6" />
-              </Link>
-              <Link href="#" className="text-foreground hover:text-primary">
-                <FaLinkedinIn className="min-h-6 min-w-6" />
-              </Link>
-              <Link href="#" className="text-foreground hover:text-primary">
-                <FaYoutube className="min-h-6 min-w-6" />
-              </Link>
-            </div>
-            <Link2 href="#" className="text-foreground mb-2 inline-block">
-              Learn About Security At WSO2 →
-            </Link2>
-            {/* <Link2 href="#" className="text-foreground mb-2 inline-block">
+            <div className="p-4">
+              <P1 className="mb-4 text-foreground">Follow us on:</P1>
+              <div className="flex items-center gap-4 text-foreground mb-4">
+                <Link href="#" className="text-foreground hover:text-primary">
+                  <FaDiscord className="min-h-6 min-w-6" />
+                </Link>
+                <Link href="#" className="text-foreground hover:text-primary">
+                  <FaTwitter className="min-h-6 min-w-6" />
+                </Link>
+                <Link href="#" className="text-foreground hover:text-primary">
+                  <FaLinkedinIn className="min-h-6 min-w-6" />
+                </Link>
+                <Link href="#" className="text-foreground hover:text-primary">
+                  <FaYoutube className="min-h-6 min-w-6" />
+                </Link>
+              </div>
+              <Link2 href="#" className="text-foreground mb-2 inline-block">
+                @{new Date().getFullYear()} WSO2. All rights reserved
+              </Link2>
+              {/* <Link2 href="#" className="text-foreground mb-2 inline-block">
               @{new Date().getFullYear()} WSO2. All rights reserved
             </Link2> */}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-x-6 sm:gap-y-12 ">
+            {links.map((link) => (
+              <div key={link.title} className="">
+                <P1 className="text-primary font-semibold mb-4">
+                  {link.title}
+                </P1>
+                <div className="flex flex-col gap-y-1 items-start">
+                  {link.links.map((link) => (
+                    <Link2 key={link.title} href={link.href}>
+                      {link.title}
+                    </Link2>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-x-6 sm:gap-y-12 ">
-          {links.map((link) => (
-            <div key={link.title} className="">
-              <P1 className="text-primary font-semibold mb-4">{link.title}</P1>
-              <div className="flex flex-col gap-y-1 items-start">
-                {link.links.map((link) => (
-                  <Link2 key={link.title} href={link.href}>
-                    {link.title}
-                  </Link2>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
